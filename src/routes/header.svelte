@@ -1,17 +1,20 @@
+<script>
+    import { base } from '$app/paths';
+</script>
 <div class="relative" style="z-index: 99999999999!important">
     <nav class="dark:bg-gray-800 bg-[black] w-full py-0">
         <div class="px-8 mx-auto max-w-7xl">
             <div class="flex items-center justify-between h-16">
                 <div class=" flex items-center">
                     <a class="flex-shrink-0" href="/">
-                        <img class="w-8 h-8" src="/rocket.svg" alt="Workflow"/>
+                        <img class="w-8 h-8" src={`${base}/rocket.svg`} alt="Workflow"/>
                     </a>
                     <div class="hidden md:block">
                         <div class="flex items-baseline ml-10 space-x-4">
-                            <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                            <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href={`${base}`}>
                                 Home
                             </a>
-                            <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/templates">
+                            <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href={`${base}/templates`}>
                                 Templates
                             </a>
                         </div>

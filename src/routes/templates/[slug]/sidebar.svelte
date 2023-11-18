@@ -1,4 +1,5 @@
 <script>
+    import {base} from '$app/paths';
     import {createEventDispatcher} from 'svelte';
 
     export let canEdit;
@@ -29,16 +30,16 @@
     }
 </style>
 <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/templates">Templates</a></li>
-    <li><a on:click={reloadApi} href="#">Reload</a></li>
+    <li><a href={`${base}`}>Home</a></li>
+    <li><a href={`${base}/templates`}>Templates</a></li>
+    <li><button on:click={reloadApi}>Reload</button></li>
     {#if canEdit}
         {#if useEditor}
-            <li><a on:click={updateTemplate} href="#">Edit Template</a></li>
+            <li><button on:click={updateTemplate}>Edit Template</button></li>
         {:else }
-            <li><a on:click={() => showModal('editContent')} href="#">Edit Template</a></li>
-            <li><a on:click={() => showModal('editLinkTos')} href="#">Edit Link</a></li>
+            <li><button on:click={() => showModal('editContent')}>Edit Template</button></li>
+            <li><button on:click={() => showModal('editLinkTos')}>Edit Link</button></li>
         {/if}
-    <li><a on:click={() => showModal('view')} href="#">View Json</a></li>
+    <li><button on:click={() => showModal('view')}>View Json</button></li>
     {/if}
 </ul>

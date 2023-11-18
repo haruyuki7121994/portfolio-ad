@@ -2,10 +2,13 @@
 	"name": "my-portfolio",
 	"version": "0.0.1",
 	"private": true,
+	"homepage": "https://haruyuki7121994.github.io/portfolio-ad",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
+		"build": "vite build && echo. > build\\.nojekyll",
+		"preview": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build --dotfiles"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -16,6 +19,7 @@
 		"flowbite-svelte-blocks": "^0.5.1",
 		"flowbite-svelte-icons": "^0.4.4",
 		"flowbite-typography": "^1.0.3",
+		"gh-pages": "^6.0.0",
 		"postcss": "^8.4.31",
 		"svelte": "^4.0.5",
 		"tailwindcss": "^3.3.3",
@@ -23,6 +27,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^2.0.3",
 		"@tinymce/tinymce-svelte": "^1.0.1",
 		"highlight.js": "^11.9.0",
 		"svelte-simple-modal": "^1.6.1",
