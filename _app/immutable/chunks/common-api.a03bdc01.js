@@ -1,0 +1,1 @@
+const a=(n={})=>{let e=new Headers;e.append("Content-Type","application/json"),e.append("Accept","application/json"),e.append("Access-Control-Allow-Origin","*"),e.append("Access-Control-Allow-Credentials","true"),e.append("ngrok-skip-browser-warning","69420");for(const[p,o]of Object.entries(n))e.append(p,o);return e};export{a as b};
